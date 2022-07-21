@@ -1,0 +1,18 @@
+Num 1:
+
+SELECT students.name,students.surname,degrees.name FROM students JOIN degrees ON degrees.id= students.degree_id WHERE degrees.name="corso di laurea in economia";
+
+Num 2:
+
+SELECT * FROM degrees JOIN departments ON departments.id = degrees.department_id WHERE degrees.level = "magistrale" AND departments.name="Dipartimento di neuroscienze";
+
+Num 3:
+
+SELECT courses.name AS course_name, teachers.name,teachers.surname FROM course_teacher JOIN courses ON courses.id = course_teacher.course_id JOIN teachers ON teachers.id=course_teacher.teacher_id WHERE teachers.id = 44;
+
+Num 5:
+
+SELECT degrees.nameAScorso_di_laurea, courses.nameASnome_corso, teachers.nameASnome_insegnante, teachers.surnameAScognome_insegnante FROM course_teacher JOIN courses ON courses.id= course_teacher.course_id JOIN teachers ON teachers.id = course_teacher.teacher_id JOIN degrees ON degrees.id=courses.degree_id;
+
+
+
